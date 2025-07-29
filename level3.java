@@ -1,3 +1,4 @@
+
 // --- Level 3 Practice Programs ---
 import java.util.*;
 import java.time.LocalDate;
@@ -38,8 +39,8 @@ class LeapYearChecker {
     }
 }
 
-
-// 2. Rewrite program 1 to determine Leap Year with single if condition using logical and && and or || operators
+// 2. Rewrite program 1 to determine Leap Year with single if condition using
+// logical and && and or || operators
 class LeapYearCheckerSingleIf {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -59,8 +60,9 @@ class LeapYearCheckerSingleIf {
     }
 }
 
-
-// 3. Write a program to input marks and 3 subjects physics, chemistry and maths. Compute the percentage and then calculate the grade as per the following guidelines
+// 3. Write a program to input marks and 3 subjects physics, chemistry and
+// maths. Compute the percentage and then calculate the grade as per the
+// following guidelines
 class StudentGradeCalculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -73,8 +75,8 @@ class StudentGradeCalculator {
         System.out.print("Enter marks for Maths (out of " + MAX_MARKS_PER_SUBJECT + "): ");
         double mathsMarks = input.nextDouble();
         if (physicsMarks < 0 || physicsMarks > MAX_MARKS_PER_SUBJECT ||
-            chemistryMarks < 0 || chemistryMarks > MAX_MARKS_PER_SUBJECT ||
-            mathsMarks < 0 || mathsMarks > MAX_MARKS_PER_SUBJECT) {
+                chemistryMarks < 0 || chemistryMarks > MAX_MARKS_PER_SUBJECT ||
+                mathsMarks < 0 || mathsMarks > MAX_MARKS_PER_SUBJECT) {
             System.out.println("Invalid marks entered. Marks must be between 0 and " + MAX_MARKS_PER_SUBJECT + ".");
         } else {
             double totalMarks = physicsMarks + chemistryMarks + mathsMarks;
@@ -111,7 +113,6 @@ class StudentGradeCalculator {
     }
 }
 
-
 // 4. Write a Program to check if the given number is a prime number or not
 class PrimeNumberChecker {
     public static void main(String[] args) {
@@ -138,7 +139,6 @@ class PrimeNumberChecker {
     }
 }
 
-
 // 5. Create a program to check if a number is armstrong or not.
 class ArmstrongNumberChecker {
     public static void main(String[] args) {
@@ -149,7 +149,8 @@ class ArmstrongNumberChecker {
         int originalNumber = number;
         int tempNumber = number;
         if (number <= 0) {
-             System.out.println("Armstrong numbers are typically positive integers. " + number + " is not an Armstrong Number.");
+            System.out.println(
+                    "Armstrong numbers are typically positive integers. " + number + " is not an Armstrong Number.");
         } else {
             while (tempNumber != 0) {
                 int digit = tempNumber % 10;
@@ -165,7 +166,6 @@ class ArmstrongNumberChecker {
         input.close();
     }
 }
-
 
 // 6. Create a program to count the number of digits in an integer.
 class DigitCounter {
@@ -187,7 +187,6 @@ class DigitCounter {
         input.close();
     }
 }
-
 
 // 7. Create a program to find the BMI of a person
 class BMICalculator {
@@ -217,8 +216,8 @@ class BMICalculator {
     }
 }
 
-
-// 8. Create a program to check if a number taken from the user is a Harshad Number.
+// 8. Create a program to check if a number taken from the user is a Harshad
+// Number.
 class HarshadNumberChecker {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -227,7 +226,8 @@ class HarshadNumberChecker {
         int sumOfDigits = 0;
         int tempNumber = number;
         if (number <= 0) {
-            System.out.println("Harshad numbers are typically positive integers. " + number + " is not a Harshad Number.");
+            System.out.println(
+                    "Harshad numbers are typically positive integers. " + number + " is not a Harshad Number.");
         } else {
             while (tempNumber != 0) {
                 int digit = tempNumber % 10;
@@ -246,7 +246,6 @@ class HarshadNumberChecker {
     }
 }
 
-
 // 9. Create a program to check if a number is an Abundant Number.
 class AbundantNumberChecker {
     public static void main(String[] args) {
@@ -263,15 +262,16 @@ class AbundantNumberChecker {
                 }
             }
             if (sumOfDivisors > number) {
-                System.out.println("The number " + number + " is an Abundant Number (Sum of divisors: " + sumOfDivisors + ").");
+                System.out.println(
+                        "The number " + number + " is an Abundant Number (Sum of divisors: " + sumOfDivisors + ").");
             } else {
-                System.out.println("The number " + number + " is Not an Abundant Number (Sum of divisors: " + sumOfDivisors + ").");
+                System.out.println("The number " + number + " is Not an Abundant Number (Sum of divisors: "
+                        + sumOfDivisors + ").");
             }
         }
         input.close();
     }
 }
-
 
 // 10. Write a program to create a calculator using switch...case.
 class SimpleCalculator {
@@ -316,8 +316,12 @@ class SimpleCalculator {
     }
 }
 
-
-// 11. Write a program DayOfWeek that takes a date as input and prints the day of the week that the date falls on. Your program should take three command-line arguments: m (month), d (day), and y (year). For m use 1 for January, 2 for February, and so forth. For output print 0 for Sunday, 1 for Monday, 2 for Tuesday, and so forth. Use the following formulas, for the Gregorian calendar (where / denotes integer division):
+// 11. Write a program DayOfWeek that takes a date as input and prints the day
+// of the week that the date falls on. Your program should take three
+// command-line arguments: m (month), d (day), and y (year). For m use 1 for
+// January, 2 for February, and so forth. For output print 0 for Sunday, 1 for
+// Monday, 2 for Tuesday, and so forth. Use the following formulas, for the
+// Gregorian calendar (where / denotes integer division):
 class DayOfWeek {
     public static void main(String[] args) {
         if (args.length != 3) {
@@ -339,21 +343,34 @@ class DayOfWeek {
         System.out.println("The day of the week for " + m + "/" + d + "/" + y + " is: " + d0);
         String dayName;
         switch (d0) {
-            case 0: dayName = "Sunday"; break;
-            case 1: dayName = "Monday"; break;
-            case 2: dayName = "Tuesday"; break;
-            case 3: dayName = "Wednesday"; break;
-            case 4: dayName = "Thursday"; break;
-            case 5: dayName = "Friday"; break;
-            case 6: dayName = "Saturday"; break;
-            default: dayName = "Error"; break;
+            case 0:
+                dayName = "Sunday";
+                break;
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Error";
+                break;
         }
         System.out.println("Which is: " + dayName);
     }
 }
-
-
-
 
 // Program 1: Football Team Height Analysis
 
@@ -382,7 +399,8 @@ public class FootballTeamStats {
     public static int findShortest(int[] arr) {
         int min = Integer.MAX_VALUE;
         for (int val : arr) {
-            if (val < min) min = val;
+            if (val < min)
+                min = val;
         }
         return min;
     }
@@ -390,7 +408,8 @@ public class FootballTeamStats {
     public static int findTallest(int[] arr) {
         int max = Integer.MIN_VALUE;
         for (int val : arr) {
-            if (val > max) max = val;
+            if (val > max)
+                max = val;
         }
         return max;
     }
@@ -453,7 +472,7 @@ public class NumberChecker {
                 second = num;
             }
         }
-        return new int[]{first, second};
+        return new int[] { first, second };
     }
 
     public static int[] findTwoSmallest(int[] digits) {
@@ -466,10 +485,9 @@ public class NumberChecker {
                 second = num;
             }
         }
-        return new int[]{first, second};
+        return new int[] { first, second };
     }
 }
-
 
 // Program 3: OTP Validation System
 
@@ -597,10 +615,14 @@ public class ScoreCard {
         double avg = total / 5.0;
         System.out.println("Total: " + total);
         System.out.println("Average: " + avg);
-        if (avg >= 90) System.out.println("Grade: A");
-        else if (avg >= 75) System.out.println("Grade: B");
-        else if (avg >= 60) System.out.println("Grade: C");
-        else System.out.println("Grade: D");
+        if (avg >= 90)
+            System.out.println("Grade: A");
+        else if (avg >= 75)
+            System.out.println("Grade: B");
+        else if (avg >= 60)
+            System.out.println("Grade: C");
+        else
+            System.out.println("Grade: D");
     }
 }
 
